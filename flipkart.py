@@ -6,7 +6,7 @@ from requests_html import HTML, HTMLSession
 
 session = HTMLSession()
 
-r = requests.get("https://www.flipkart.com/search?q=bags&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=1")
+r = session.get("https://www.flipkart.com/search?q=bags&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=1")
 
 src = r.content
 soup = BeautifulSoup(src,'html.parser')
